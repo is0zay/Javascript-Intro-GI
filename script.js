@@ -23,16 +23,16 @@
 
 //MEDIUM: Write a program to tell if someone is shouting (typing in all caps), whispering (typing in all lowercase), or neither. Use prompt to get user input, and then console log whether the user was shouting, whispering, or talking normally.
 
-let userText = prompt("type a word");
+// let userText = prompt("type a word");
 
 
-if ( userText  === userText.toUpperCase()) {
-        alert("Shouting");
- }else if (userText === userText.toLowerCase()) {
-        alert("whisper");
-} else {
-       alert("neither");
-}
+// if ( userText  === userText.toUpperCase()) {
+//         alert("Shouting");
+//  }else if (userText === userText.toLowerCase()) {
+//         alert("whisper");
+// } else {
+//        alert("neither");
+// }
 
 // let userTxt = prompt("please insert");
 // if (userTxt === userTxt.toUpperCase()) {
@@ -62,4 +62,38 @@ function divide (a,b) {
     return a / b;
 }
 
+
 // VERY HARD: Create a simple calculator that prompts the user for a number, an operator (either +, -, * or /) and another number, and then uses the functions created in the hard challenge to output the value in sentence form. Example output: "3 + 4 = 7"
+
+// let solve = "2 * 5";
+
+// let solveThis = new Function('return ' + solve)();
+
+let userNum1 = Number(prompt("enter the first number"));
+
+let userOpertator = prompt("enter your math operator");
+
+let userNum2 = Number(prompt("enter the second number"));
+
+function solveThis(a,b) {
+    let userAnswer = 0;
+    
+    if(userOpertator === "+") {
+        userAnswer = add(a, b);
+        return alert(userAnswer);
+
+    }else if(userOpertator === "-") {
+        userAnswer = subtract(a,b);
+        return alert(userAnswer);
+
+    }else if(userOpertator === "*") {
+        userAnswer = mult(a,b);
+        return alert(userAnswer);
+
+    }else if(userOpertator === "/") {
+        userAnswer = divide(a,b);
+        return alert(userAnswer);
+    }
+}
+
+solveThis(userNum1, userNum2);
